@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WIN MARKET | Soko la Bidhaa Tanzania</title>
+
+    <meta
+        name="description"
+        content="WIN MARKET ni soko la mtandaoni la Tanzania. Nunua na uza bidhaa mbalimbali."
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <span class="logo-win">
+            WIN
+        </span>
+
+        <span class="logo-market">
+            MARKET
+        </span>
+
+    </div>
+
+
+    <button
+        class="menu-btn"
+        type="button"
+        onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+
+    <nav id="navMenu">
+
+        <a
+            href="#home"
+            onclick="closeMenu()">
+
+            🏠 Mwanzo
+
+        </a>
+
+
+        <a
+            href="#categories"
+            onclick="closeMenu()">
+
+            📂 Categories
+
+        </a>
+
+
+        <a
+            href="#products"
+            onclick="closeMenu()">
+
+            📦 Bidhaa
+
+        </a>
+
+
+        <a
+            href="#sell"
+            onclick="closeMenu()">
+
+            ➕ Uza Bidhaa
+
+        </a>
+
+
+        <a
+            href="admin.html"
+            id="adminPanelLink"
+            style="display:none;">
+
+            👑 Admin Panel
+
+        </a>
+
+
+        <span
+            id="userArea"
+            style="display:none;">
+
+            <span id="userName"></span>
+
+            <a
+                href="#"
+                onclick="logoutUser(); return false;">
+
+                🚪 Toka
+
+            </a>
+
+        </span>
+
+
+        <span id="guestArea">
+
+            <a href="register.html">
+
+                👤 Jisajili
+
+            </a>
+
+
+            <a href="login.html">
+
+                🔐 Ingia
+
+            </a>
+
+        </span>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home">
+
+    <div class="hero-content">
+
+        <span class="badge">
+
+            🇹🇿 SOKO LA TANZANIA
+
+        </span>
+
+
+        <h1>
+
+            Nunua na Uza
+
+            <span>
+                Bidhaa
+            </span>
+
+            kwa urahisi.
+
+        </h1>
+
+
+        <p>
+
+            Karibu WIN MARKET — sehemu ya kutafuta,
+            kununua na kuuza bidhaa mbalimbali kutoka Tanzania.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#products"
+                class="main-btn">
+
+                🛍️ Angalia Bidhaa
+
+            </a>
+
+
+            <a
+                href="#sell"
+                class="secondary-btn">
+
+                ➕ Uza Bidhaa
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services">
+
+    <div class="service-card dark">
+
+        <div class="service-icon">
+            🛍️
+        </div>
+
+        <div>
+
+            <h3>
+                WIN MARKET
+            </h3>
+
+            <p>
+                Nunua na uza bidhaa mbalimbali
+                Tanzania kwa urahisi.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="service-card orange">
+
+        <div class="service-icon">
+            🌿
+        </div>
+
+        <div>
+
+            <h3>
+                Afya & Beauty
+            </h3>
+
+            <p>
+                Pata bidhaa mbalimbali za
+                afya, lishe na cosmetics.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        🔎
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Tafuta bidhaa, simu, gari, nguo..."
+            oninput="searchProducts()"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+    class="section"
+    id="categories">
+
+    <div class="section-title">
+
+        <h2>
+            Tafuta kwa Category
+        </h2>
+
+        <p>
+            Chagua aina ya bidhaa unayotafuta
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Phones')">
+
+            <div class="cat-icon">
+                📱
+            </div>
+
+            <span>
+                Simu
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Computers')">
+
+            <div class="cat-icon">
+                💻
+            </div>
+
+            <span>
+                Computers
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Cars')">
+
+            <div class="cat-icon">
+                🚗
+            </div>
+
+            <span>
+                Magari
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Clothing')">
+
+            <div class="cat-icon">
+                👕
+            </div>
+
+            <span>
+                Nguo
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Electrical')">
+
+            <div class="cat-icon">
+                ⚡
+            </div>
+
+            <span>
+                Electronics
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Furniture')">
+
+            <div class="cat-icon">
+                🛋️
+            </div>
+
+            <span>
+                Furniture
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Home')">
+
+            <div class="cat-icon">
+                🏠
+            </div>
+
+            <span>
+                Nyumbani
+            </span>
+
+        </button>
+
+
+        <button
+            class="category"
+            type="button"
+            onclick="filterCategory('Other')">
+
+            <div class="cat-icon">
+                📦
+            </div>
+
+            <span>
+                Nyingine
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section
+    class="products-section"
+    id="products">
+
+    <div class="section-title">
+
+        <h2>
+            🛍️ Bidhaa Zilizopo
+        </h2>
+
+        <p>
+            Angalia bidhaa zilizowekwa na wauzaji
+        </p>
+
+    </div>
+
+
+    <div
+        class="products"
+        id="productList">
+
+        <div class="loading">
+
+            ⏳ Inapakia bidhaa...
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMENTS MODAL
+===================================================== -->
+
+<div
+    id="commentsModal"
+    class="comments-modal">
+
+    <div class="comments-modal-content">
+
+        <button
+            type="button"
+            class="comments-close"
+            onclick="closeCommentsModal()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            💬 Comments
+        </h2>
+
+
+        <p
+            id="commentProductName"
+            class="comment-product-name">
+
+        </p>
+
+
+        <div
+            id="commentsList"
+            class="comments-list">
+
+            <div class="comments-loading">
+
+                ⏳ Inapakia comments...
+
+            </div>
+
+        </div>
+
+
+        <div class="write-comment">
+
+            <textarea
+                id="commentInput"
+                placeholder="Andika comment yako..."
+                maxlength="500">
+            </textarea>
+
+
+            <div class="comment-character-count">
+
+                <span id="commentCount">
+                    0
+                </span>
+
+                / 500
+
+            </div>
+
+
+            <button
+                type="button"
+                id="submitCommentBtn"
+                onclick="submitComment()">
+
+                💬 Tuma Comment
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SELL SECTION
+===================================================== -->
+
+<section
+    class="sell-section"
+    id="sell">
+
+    <div class="sell-box">
+
+        <div class="sell-icon">
+            🛒
+        </div>
+
+
+        <h2>
+            Una bidhaa ya kuuza?
+        </h2>
+
+
+        <p>
+            Weka bidhaa yako kwenye WIN MARKET
+            na ifikie wanunuzi Tanzania.
+        </p>
+
+
+        <button
+            class="sell-btn"
+            type="button"
+            onclick="openSellForm()">
+
+            ➕ Weka Bidhaa Sasa
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SELL MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="sellModal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-btn"
+            type="button"
+            onclick="closeSellForm()">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            Weka Bidhaa
+        </h2>
+
+
+        <p class="modal-description">
+            Jaza taarifa za bidhaa yako.
+        </p>
+
+
+        <form
+            id="sellForm"
+            onsubmit="submitProduct(event)">
+
+
+            <label for="sellerProduct">
+                Jina la Bidhaa
+            </label>
+
+
+            <input
+                type="text"
+                id="sellerProduct"
+                placeholder="Mfano: Samsung Galaxy A55"
+                required
+            >
+
+
+            <label for="sellerCategory">
+                Category
+            </label>
+
+
+            <select
+                id="sellerCategory"
+                required>
+
+                <option value="">
+                    Chagua Category
+                </option>
+
+                <option value="Phones">
+                    📱 Simu
+                </option>
+
+                <option value="Computers">
+                    💻 Computers
+                </option>
+
+                <option value="Cars">
+                    🚗 Magari
+                </option>
+
+                <option value="Clothing">
+                    👕 Nguo
+                </option>
+
+                <option value="Electrical">
+                    ⚡ Electronics
+                </option>
+
+                <option value="Furniture">
+                    🛋️ Furniture
+                </option>
+
+                <option value="Home">
+                    🏠 Nyumbani
+                </option>
+
+                <option value="Other">
+                    📦 Nyingine
+                </option>
+
+            </select>
+
+
+            <label for="sellerPrice">
+                Bei (TSh)
+            </label>
+
+
+            <input
+                type="number"
+                id="sellerPrice"
+                placeholder="Mfano: 650000"
+                min="1"
+                required
+            >
+
+
+            <label for="sellerLocation">
+                Mkoa / Eneo
+            </label>
+
+
+            <input
+                type="text"
+                id="sellerLocation"
+                placeholder="Mfano: Mwanza"
+                required
+            >
+
+
+            <label for="sellerPhone">
+                Namba ya Simu
+            </label>
+
+
+            <input
+                type="tel"
+                id="sellerPhone"
+                placeholder="Mfano: 0712345678"
+                required
+            >
+
+
+            <p class="private-note">
+
+                🔒 Namba hii itaonekana kwa Admin pekee.
+
+            </p>
+
+
+            <label for="sellerImage">
+                📸 Picha ya Bidhaa
+            </label>
+
+
+            <div class="upload-image-box">
+
+                <input
+                    type="file"
+                    id="sellerImage"
+                    name="sellerImage"
+                    accept="image/*"
+                    required
+                >
+
+
+                <label
+                    for="sellerImage"
+                    class="choose-image-btn">
+
+                    📸 Chagua Picha
+
+                </label>
+
+
+                <p
+                    id="selectedImageName"
+                    class="selected-image-name">
+
+                    Hakuna picha iliyochaguliwa
+
+                </p>
+
+            </div>
+
+
+            <div id="imagePreview"></div>
+
+
+            <p class="file-note">
+
+                Chagua picha moja tu ya bidhaa kutoka Gallery.
+
+            </p>
+
+
+            <label for="sellerDescription">
+                Maelezo ya Bidhaa
+            </label>
+
+
+            <textarea
+                id="sellerDescription"
+                placeholder="Andika maelezo ya bidhaa..."
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+                id="submitProductBtn">
+
+                🚀 Weka Bidhaa
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <div class="footer-logo">
+
+                WIN
+
+                <span>
+                    MARKET
+                </span>
+
+            </div>
+
+
+            <p>
+
+                Soko la mtandaoni la Tanzania
+                kwa kununua na kuuza bidhaa
+                kwa urahisi.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Msaada
+            </h3>
+
+
+            <a href="terms.html">
+                📜 Terms & Conditions
+            </a>
+
+
+            <a href="terms.html#seller">
+                🛍️ Masharti ya Muuzaji
+            </a>
+
+
+            <a href="terms.html#buyer">
+                👤 Masharti ya Mnunuzi
+            </a>
+
+
+            <a href="terms.html#payments">
+                💳 Malipo
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Customer Service
+            </h3>
+
+
+            <p class="footer-contact">
+                📱 WhatsApp
+            </p>
+
+
+            <a
+                href="https://wa.me/255760615325"
+                target="_blank"
+                rel="noopener">
+
+                +255 760 615 325
+
+            </a>
+
+
+            <p class="footer-contact">
+                ☎️ Simu ya kawaida
+            </p>
+
+
+            <a href="tel:+255671829313">
+
+                +255 671 829 313
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <div>
+
+            © 2026
+
+            <strong>
+                WIN MARKET
+            </strong>
+
+            <br>
+
+            Haki zote zimehifadhiwa.
+
+        </div>
+
+
+        <div>
+
+            <a href="terms.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FULL SCREEN IMAGE VIEWER
+===================================================== -->
+
+<div
+    id="imageViewer"
+    class="image-viewer">
+
+    <button
+        class="viewer-close"
+        type="button"
+        onclick="closeImageViewer()">
+
+        ×
+
+    </button>
+
+
+    <img
+        id="viewerImage"
+        class="viewer-image"
+        src=""
+        alt="Picha ya bidhaa"
+    >
+
+</div>
+
+
+
+<!-- =====================================================
+     SELLER NOTIFICATION
+===================================================== -->
+
+<div
+    id="sellerNotification"
+    class="seller-notification">
+
+    <div class="notification-icon">
+        🛍️
+    </div>
+
+
+    <div class="notification-content">
+
+        <strong>
+            Muuzaji, zingatia hili
+        </strong>
+
+
+        <p>
+
+            Weka bidhaa zenye picha nzuri na
+            andika maelezo ya kutosha kuhusu bidhaa yako.
+            Uaminifu ni kipaumbele chetu.
+            Weka order yako sasa!
+
+        </p>
+
+    </div>
+
+
+    <button
+        class="notification-close"
+        type="button"
+        onclick="closeSellerNotification()">
+
+        ×
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script
+    type="module"
+    src="script.js">
+</script>
+
+
+</body>
+
+</html>

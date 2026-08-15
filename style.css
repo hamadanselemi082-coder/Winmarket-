@@ -1,0 +1,2536 @@
+/* =========================================================
+   WIN MARKET - COMPLETE CSS
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff8f1;
+    color: #172033;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 18px rgba(0,0,0,.08);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo-win {
+    background: #172033;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.logo-market {
+    color: #f97316;
+}
+
+
+/* ================= NAV ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: #344054;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #f97316;
+}
+
+#guestArea,
+#userArea {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#userName {
+    background: #fff1e6;
+    color: #c2410c;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 470px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(249,115,22,.20),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            white
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffedd5;
+    color: #c2410c;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #f97316;
+}
+
+.hero p {
+    max-width: 570px;
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.main-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main-btn {
+    background: #f97316;
+    color: white;
+}
+
+.secondary-btn {
+    background: white;
+    color: #172033;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 20px 7%;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.service-card {
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-card.dark {
+    background: #172033;
+    color: white;
+}
+
+.service-card.orange {
+    background: #fff1e6;
+    border: 1px solid #fed7aa;
+}
+
+.service-icon {
+    font-size: 42px;
+}
+
+.service-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+
+.service-card.orange p {
+    color: #667085;
+}
+
+.service-card.orange h3 {
+    color: #c2410c;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-section {
+    padding: 25px 7%;
+    background: white;
+}
+
+.search-box {
+    max-width: 760px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 14px 18px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section,
+.products-section {
+    padding: 55px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #7a8494;
+    font-size: 14px;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 0;
+}
+
+.category {
+    border: 1px solid #eee;
+    background: white;
+    border-radius: 16px;
+    padding: 22px 10px;
+    cursor: pointer;
+    color: #172033;
+    transition: .2s ease;
+}
+
+.category:hover {
+    border-color: #f97316;
+    transform: translateY(-3px);
+}
+
+.cat-icon {
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.category span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products-section {
+    background: #fffaf5;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    align-items: start;
+    margin-top: 0;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #eee7df;
+    border-radius: 13px;
+    overflow: hidden;
+    min-width: 0;
+    align-self: start;
+    transition: .2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+
+/* ================= PRODUCT IMAGES ================= */
+
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    width: 100%;
+    height: 165px;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-images.single {
+    grid-template-columns: 1fr;
+}
+
+.product-images .product-image,
+.product-card .product-image {
+    width: 100%;
+    height: 165px;
+    min-height: 165px;
+    max-height: 165px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in;
+    flex-shrink: 0;
+    background:
+        linear-gradient(
+            135deg,
+            #fff1e6,
+            #f8fafc
+        );
+}
+
+.product-images .product-image img,
+.product-card .product-image img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+    transition: transform .25s ease;
+}
+
+.product-images .product-image:hover img,
+.product-card .product-image:hover img {
+    transform: scale(1.04);
+}
+
+.product-image-item {
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #fff1e6,
+            #f8fafc
+        );
+    cursor: zoom-in;
+}
+
+.product-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .25s ease;
+}
+
+.product-image-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ================= IMAGE LABEL ================= */
+
+.product-label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #f97316;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 6px;
+    font-size: 8px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+
+/* ================= MORE IMAGES ================= */
+
+.more-images {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    background: rgba(0,0,0,.75);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+
+/* ================= PRODUCT EMOJI ================= */
+
+.product-emoji {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+
+/* ================= PRODUCT INFO ================= */
+
+.product-info {
+    padding: 11px;
+}
+
+.product-category {
+    color: #ea580c;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.product-info h3 {
+    font-size: 13px;
+    margin: 5px 0 7px;
+    line-height: 1.3;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.location {
+    color: #7a8494;
+    font-size: 10px;
+    margin: 7px 0;
+}
+
+.description {
+    color: #667085;
+    font-size: 10px;
+    line-height: 1.4;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-btn {
+    width: 100%;
+    border: none;
+    background: #172033;
+    color: white;
+    padding: 8px;
+    border-radius: 7px;
+    margin-top: 9px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.contact-btn:hover {
+    background: #f97316;
+}
+
+
+/* ================= LOADING ================= */
+
+.loading,
+.empty-products {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #667085;
+}
+
+.empty-products div {
+    font-size: 45px;
+}
+
+
+/* ================= PAGINATION ================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    border: 1px solid #e5e7eb;
+    background: white;
+    color: #172033;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.pagination button:hover {
+    border-color: #f97316;
+    color: #f97316;
+}
+
+.pagination button.active {
+    background: #f97316;
+    color: white;
+    border-color: #f97316;
+}
+
+.pagination button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    color: #667085;
+    font-size: 11px;
+    margin: 0 5px;
+}
+
+
+/* ================= SELL ================= */
+
+.sell-section {
+    padding: 65px 7%;
+    background: white;
+}
+
+.sell-box {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px 25px;
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172033,
+            #273449
+        );
+}
+
+.sell-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.sell-box h2 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.sell-box p {
+    max-width: 600px;
+    margin: auto auto 25px;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.sell-btn {
+    border: none;
+    background: #f97316;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(15,23,42,.65);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    max-width: 480px;
+    margin: 35px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-description {
+    color: #667085;
+    font-size: 13px;
+    margin: 8px 0 20px;
+}
+
+.modal-content label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 14px 0 6px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe4eb;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    font-family: inherit;
+}
+
+.modal-content textarea {
+    height: 95px;
+    resize: vertical;
+}
+
+.private-note,
+.file-note {
+    color: #667085;
+    font-size: 10px;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+
+/* ================= IMAGE UPLOAD ================= */
+
+.single-image-upload,
+.upload-image-box {
+    width: 100%;
+    margin-top: 8px;
+}
+
+#sellerImage {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.choose-image-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 55px;
+
+    padding: 14px;
+
+    background: #172033;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    text-align: center;
+
+    margin: 0 !important;
+
+    transition: .2s ease;
+}
+
+.choose-image-btn:hover {
+    background: #f97316;
+}
+
+.choose-image-btn:active {
+    transform: scale(.98);
+}
+
+.selected-image-name {
+    margin-top: 9px;
+    color: #667085;
+    font-size: 12px;
+    text-align: center;
+    word-break: break-word;
+}
+
+
+/* ================= IMAGE PREVIEW ================= */
+
+#imagePreview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.preview-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: block;
+}
+
+#imagePreview img,
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* ================= SUBMIT ================= */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    background: #f97316;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111827;
+    color: white;
+    padding: 50px 7% 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.footer-logo span {
+    color: #f97316;
+}
+
+.footer-column p {
+    color: #9ca3af;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    display: block;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: #f97316;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #273449;
+    display: flex;
+    justify-content: space-between;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+
+/* ================= IMAGE VIEWER ================= */
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.94);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-viewer.show {
+    display: flex;
+}
+
+.viewer-image {
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.5);
+}
+
+.viewer-close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.viewer-close:hover {
+    background: rgba(255,255,255,.35);
+}
+
+.viewer-prev,
+.viewer-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.viewer-prev {
+    left: 15px;
+}
+
+.viewer-next {
+    right: 15px;
+}
+
+.viewer-prev:hover,
+.viewer-next:hover {
+    background: rgba(255,255,255,.35);
+}
+
+.viewer-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0,0,0,.55);
+    padding: 6px 11px;
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FLOATING SELLER NOTIFICATION
+   JUU CHINI YA HEADER
+   ========================================================= */
+
+.seller-notification {
+    position: fixed;
+
+    left: 20px;
+    right: auto;
+
+    top: 85px;
+    bottom: auto;
+
+    width: 360px;
+    max-width: calc(100vw - 40px);
+
+    background: white;
+
+    border: 1px solid #f1f1f1;
+    border-radius: 16px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.18);
+
+    z-index: 9998;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-25px);
+
+    transition:
+        opacity .4s ease,
+        transform .4s ease,
+        visibility .4s ease;
+}
+
+.seller-notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.notification-icon {
+    min-width: 43px;
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    background: #fff1e6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content strong {
+    display: block;
+    color: #172033;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.notification-content p {
+    margin: 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.notification-close {
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    color: #667085;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    line-height: 20px;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: #172033;
+    color: white;
+}
+
+
+/* ================= POSITION FIX ================= */
+
+main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        padding: 0 18px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    #guestArea,
+    #userArea {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .services {
+        padding: 20px 15px;
+    }
+
+    .section,
+    .products-section,
+    .sell-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .category {
+        padding: 15px 5px;
+    }
+
+    .cat-icon {
+        font-size: 25px;
+    }
+
+    .category span {
+        font-size: 9px;
+    }
+
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 9px;
+    }
+
+    .product-images {
+        height: 125px;
+    }
+
+    .product-images .product-image,
+    .product-card .product-image {
+        height: 125px;
+        min-height: 125px;
+        max-height: 125px;
+    }
+
+    .product-image-item {
+        height: 125px;
+    }
+
+    .product-info {
+        padding: 9px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .location {
+        font-size: 9px;
+    }
+
+    .description {
+        font-size: 9px;
+    }
+
+    .contact-btn {
+        padding: 7px;
+        font-size: 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .product-images {
+        height: 110px;
+    }
+
+    .product-images .product-image,
+    .product-card .product-image {
+        height: 110px;
+        min-height: 110px;
+        max-height: 110px;
+    }
+
+    .product-image-item {
+        height: 110px;
+    }
+
+    .product-info {
+        padding: 9px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .description {
+        font-size: 9px;
+    }
+
+    .contact-btn {
+        padding: 7px;
+        font-size: 10px;
+    }
+
+    #imagePreview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .preview-image {
+        height: 120px;
+    }
+
+    .viewer-image {
+        max-width: 96vw;
+        max-height: 82vh;
+    }
+
+    .viewer-close {
+        width: 42px;
+        height: 42px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .viewer-prev,
+    .viewer-next {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+
+    .viewer-prev {
+        left: 8px;
+    }
+
+    .viewer-next {
+        right: 8px;
+    }
+
+
+    /* NOTIFICATION JUU KWENYE SIMU */
+
+    .seller-notification {
+        left: 12px;
+        right: 12px;
+
+        top: 82px;
+        bottom: auto;
+
+        width: auto;
+        max-width: none;
+
+        padding: 13px;
+        border-radius: 15px;
+    }
+
+    .notification-content strong {
+        font-size: 13px;
+    }
+
+    .notification-content p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .notification-icon {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .choose-image-btn {
+        min-height: 58px;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .product-images {
+        height: 100px;
+    }
+
+    .product-images .product-image,
+    .product-card .product-image {
+        height: 100px;
+        min-height: 100px;
+        max-height: 100px;
+    }
+
+    .product-image-item {
+        height: 100px;
+    }
+
+    .product-info {
+        padding: 8px;
+    }
+
+    .product-info h3 {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .contact-btn {
+        font-size: 9px;
+        padding: 6px;
+    }
+
+    .pagination {
+        gap: 4px;
+    }
+
+    .pagination button {
+        min-width: 30px;
+        height: 30px;
+        padding: 0 7px;
+        font-size: 11px;
+    }
+}/* =========================================================
+   WIN MARKET - COMMENTS / REVIEWS MODAL
+   ========================================================= */
+
+/* ================= COMMENTS MODAL ================= */
+
+.comments-modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 10000;
+
+    background: rgba(15, 23, 42, 0.70);
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* JS inaweza kutumia display:flex */
+
+.comments-modal.show {
+    display: flex;
+}
+
+
+/* ================= MODAL CONTENT ================= */
+
+.comments-modal-content {
+    width: 100%;
+    max-width: 520px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .25);
+
+    animation:
+        commentsModalIn .25s ease;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes commentsModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ================= CLOSE BUTTON ================= */
+
+.comments-close-btn {
+
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #172033;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: .2s ease;
+}
+
+
+.comments-close-btn:hover {
+
+    background: #172033;
+
+    color: white;
+
+}
+
+
+/* ================= HEADER ================= */
+
+.comments-header {
+
+    padding-right: 45px;
+
+    margin-bottom: 18px;
+}
+
+
+.comments-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #172033;
+
+    font-size: 22px;
+
+    font-weight: 800;
+}
+
+
+.comments-header p {
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= RATING SUMMARY ================= */
+
+.comments-rating-summary {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.rating-number {
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    color: #c2410c;
+
+    min-width: 60px;
+
+    text-align: center;
+}
+
+
+.rating-stars {
+
+    color: #f97316;
+
+    font-size: 21px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 3px;
+}
+
+
+.comments-rating-summary p {
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 11px;
+}
+
+
+/* ================= COMMENTS LIST ================= */
+
+.comments-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    max-height: 310px;
+
+    overflow-y: auto;
+
+    padding-right: 3px;
+}
+
+
+/* ================= SINGLE COMMENT ================= */
+
+.comment-item {
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 13px;
+
+    padding: 13px;
+}
+
+
+.comment-item-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 6px;
+}
+
+
+.comment-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+.comment-avatar {
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #172033;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+.comment-user-name {
+
+    color: #172033;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.comment-date {
+
+    color: #98a2b3;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* ================= COMMENT RATING ================= */
+
+.comment-rating {
+
+    color: #f97316;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= COMMENT TEXT ================= */
+
+.comment-text {
+
+    color: #475467;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+
+    margin: 0;
+}
+
+
+/* ================= SELLER REPLY ================= */
+
+.seller-reply {
+
+    margin-top: 10px;
+
+    margin-left: 15px;
+
+    padding: 10px 12px;
+
+    background: #fff1e6;
+
+    border-left: 3px solid #f97316;
+
+    border-radius: 8px;
+}
+
+
+.seller-reply-title {
+
+    color: #c2410c;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    margin-bottom: 4px;
+}
+
+
+.seller-reply-text {
+
+    color: #667085;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* ================= LOADING ================= */
+
+.comments-loading {
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    color: #667085;
+
+    font-size: 12px;
+}
+
+
+/* ================= EMPTY COMMENTS ================= */
+
+.empty-comments {
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    background: #f8fafc;
+
+    border-radius: 13px;
+
+    border: 1px dashed #d0d5dd;
+
+    color: #667085;
+
+    font-size: 12px;
+}
+
+
+.empty-comments-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================= WRITE COMMENT ================= */
+
+.comment-form-area {
+
+    border-top: 1px solid #eaecf0;
+
+    padding-top: 18px;
+
+    margin-top: 5px;
+}
+
+
+.comment-form-area h3 {
+
+    margin: 0 0 10px;
+
+    color: #172033;
+
+    font-size: 14px;
+
+}
+
+
+/* ================= STAR INPUT ================= */
+
+.comment-stars-input {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.comment-stars-input button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #f97316;
+
+    font-size: 27px;
+
+    padding: 0 2px;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    transition: .15s ease;
+}
+
+
+.comment-stars-input button:hover {
+
+    transform: scale(1.12);
+
+}
+
+
+/* Selected star */
+
+.comment-stars-input button.active {
+
+    color: #f97316;
+
+}
+
+
+/* ================= COMMENT TEXTAREA ================= */
+
+#commentText {
+
+    width: 100%;
+
+    min-height: 95px;
+
+    resize: vertical;
+
+    padding: 12px;
+
+    border: 1px solid #dfe4eb;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: white;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    transition: .2s ease;
+}
+
+
+#commentText:focus {
+
+    border-color: #f97316;
+
+    box-shadow:
+        0 0 0 3px rgba(249, 115, 22, .10);
+
+}
+
+
+#commentText::placeholder {
+
+    color: #98a2b3;
+
+}
+
+
+/* ================= SUBMIT COMMENT ================= */
+
+.submit-comment-btn {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 13px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f97316;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.submit-comment-btn:hover {
+
+    background: #ea580c;
+
+    transform: translateY(-1px);
+
+}
+
+
+.submit-comment-btn:active {
+
+    transform: scale(.98);
+
+}
+
+
+.submit-comment-btn:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ================= COMMENT COUNT ================= */
+
+.comment-count {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 18px;
+
+    height: 18px;
+
+    padding: 0 5px;
+
+    margin-left: 4px;
+
+    border-radius: 20px;
+
+    background: #fff1e6;
+
+    color: #c2410c;
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+/* ================= PRODUCT COMMENT BUTTON ================= */
+
+.product-actions {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    margin-top: 9px;
+}
+
+
+.product-actions .contact-btn {
+
+    margin-top: 0;
+
+}
+
+
+.comment-btn {
+
+    width: 100%;
+
+    border: 1px solid #e5e7eb;
+
+    background: white;
+
+    color: #172033;
+
+    padding: 8px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.comment-btn:hover {
+
+    border-color: #f97316;
+
+    color: #f97316;
+
+    background: #fffaf5;
+}
+
+
+/* ================= COMMENT NOTIFICATION ================= */
+
+.comment-notification {
+
+    position: fixed;
+
+    top: 85px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(-20px);
+
+    background: #172033;
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20);
+
+    z-index: 11000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s ease;
+}
+
+
+.comment-notification.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE COMMENTS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .comments-modal {
+
+        padding: 10px;
+
+        align-items: flex-end;
+
+    }
+
+
+    .comments-modal-content {
+
+        max-height: 92vh;
+
+        border-radius: 20px 20px 12px 12px;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .comments-header h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .comments-header p {
+
+        font-size: 12px;
+
+    }
+
+
+    .comments-rating-summary {
+
+        padding: 12px;
+
+    }
+
+
+    .rating-number {
+
+        font-size: 28px;
+
+        min-width: 50px;
+
+    }
+
+
+    .rating-stars {
+
+        font-size: 18px;
+
+    }
+
+
+    .comments-list {
+
+        max-height: 270px;
+
+    }
+
+
+    .comment-item {
+
+        padding: 11px;
+
+    }
+
+
+    .comment-user-name {
+
+        font-size: 11px;
+
+    }
+
+
+    .comment-text {
+
+        font-size: 11px;
+
+    }
+
+
+    .comment-date {
+
+        font-size: 8px;
+
+    }
+
+
+    .seller-reply {
+
+        margin-left: 8px;
+
+    }
+
+
+    .comment-stars-input button {
+
+        font-size: 30px;
+
+    }
+
+
+    #commentText {
+
+        min-height: 90px;
+
+        font-size: 12px;
+
+    }
+
+
+    .submit-comment-btn {
+
+        padding: 13px;
+
+        font-size: 12px;
+
+    }
+
+
+    .product-actions {
+
+        gap: 5px;
+
+    }
+
+
+    .comment-btn,
+    .product-actions .contact-btn {
+
+        padding: 7px 4px;
+
+        font-size: 9px;
+
+    }
+
+
+    .comment-count {
+
+        min-width: 16px;
+
+        height: 16px;
+
+        font-size: 8px;
+
+    }
+
+
+    .comment-notification {
+
+        width: calc(100% - 30px);
+
+        text-align: center;
+
+        font-size: 11px;
+
+        top: 82px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .comments-modal-content {
+
+        padding: 18px 12px;
+
+    }
+
+
+    .comments-rating-summary {
+
+        gap: 8px;
+
+    }
+
+
+    .rating-number {
+
+        font-size: 25px;
+
+    }
+
+
+    .rating-stars {
+
+        font-size: 16px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .comment-stars-input button {
+
+        font-size: 26px;
+
+    }
+
+
+    .product-actions {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .comment-btn,
+    .product-actions .contact-btn {
+
+        font-size: 10px;
+
+    }
+
+}/* =========================================================
+   WIN MARKET - KUBANA SPACE KATI YA SECTIONS
+   ========================================================= */
+
+/* Punguza sehemu ya Services */
+.services {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Punguza search section */
+.search-section {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Search box isiwe na nafasi kubwa */
+.search-box {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Categories isogee juu */
+.section#categories {
+    padding-top: 20px !important;
+    padding-bottom: 25px !important;
+}
+
+/* Title ya categories iwe compact */
+#categories .section-title {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+#categories .section-title h2 {
+    margin-bottom: 4px !important;
+}
+
+#categories .section-title p {
+    margin: 0 !important;
+}
+
+/* Products isogee pia karibu na categories */
+.products-section {
+    padding-top: 25px !important;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+
+    .services {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .search-section {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .section#categories {
+        padding-top: 15px !important;
+        padding-bottom: 20px !important;
+    }
+
+    #categories .section-title {
+        margin-bottom: 12px !important;
+    }
+
+    .products-section {
+        padding-top: 20px !important;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 600px) {
+
+    .services {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .search-section {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+
+    .section#categories {
+        padding-top: 12px !important;
+        padding-bottom: 15px !important;
+    }
+
+    #categories .section-title {
+        margin-bottom: 10px !important;
+    }
+
+    .products-section {
+        padding-top: 15px !important;
+    }
+}/* =========================================================
+   KUPUNGUZA NAFASI CHINI YA HERO BUTTONS
+   ========================================================= */
+
+.hero {
+    min-height: auto !important;
+    padding-top: 55px !important;
+    padding-bottom: 25px !important;
+}
+
+.hero-buttons {
+    margin-bottom: 0 !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 850px) {
+
+    .hero {
+        min-height: auto !important;
+        padding-top: 35px !important;
+        padding-bottom: 18px !important;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 30px !important;
+        padding-bottom: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   END COMMENTS CSS
+   ========================================================= */
+
+
+/* =========================================================
+   END WIN MARKET CSS
+   ========================================================= */

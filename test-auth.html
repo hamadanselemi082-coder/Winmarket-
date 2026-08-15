@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WIN MARKET Firebase Login Test</title>
+</head>
+
+<body>
+
+    <h2>WIN MARKET Firebase Login Test</h2>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Weka email"
+    >
+
+    <br><br>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Weka password"
+    >
+
+    <br><br>
+
+    <button id="test">
+        TEST LOGIN
+    </button>
+
+    <p id="result"></p>
+
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+import {
+    getAuth,
+    signInWithEmailAndPassword
+}
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyC_4QehikPfVElfPe4j9Jr-aG1xd-E54-U",
+    authDomain: "win-market-10eaf.firebaseapp.com",
+    projectId: "win-market-10eaf",
+    storageBucket: "win-market-10eaf.firebasestorage.app",
+    messagingSenderId: "82624065101",
+    appId: "1:82624065101:web:6b0b822141010644057604"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+
+document
+.getElementById("test")
+.addEventListener(
+    "click",
+    async function() {
+
+        const email =
+            document
+            .getElementById("email")
+            .value
+            .trim();
+
+        const password =
+            document
+            .getElementById("password")
+            .value;
+
+        const result =
+            document
+            .getElementById("result");
+
+
+        if (!email || !password) {
+
+            result.innerText =
+                "⚠️ Weka email na password.";
+
+            return;
+        }
+
+
+        result.innerText =
+            "Inajaribu kuingia...";
+
+
+        try {
+
+            const userCredential =
+                await signInWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+
+            result.innerText =
+                "✅ LOGIN IMEFANIKIWA!\n" +
+                userCredential.user.email;
+
+        }
+
+        catch(error) {
+
+            console.error(error);
+
+            result.innerText =
+                "❌ " +
+                error.code +
+                "\n" +
+                error.message;
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

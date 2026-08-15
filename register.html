@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jisajili | WIN MARKET</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 22px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: .6;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login a {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="register-box">
+
+    <div class="logo">
+        WIN <span>MARKET</span>
+    </div>
+
+    <h2>Fungua Akaunti</h2>
+
+    <p class="description">
+        Jisajili kama muuzaji wa WIN MARKET
+    </p>
+
+    <form id="registerForm">
+
+        <label>Jina lako</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Mfano: Hamad Anselemi"
+            required
+        >
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="mfano@gmail.com"
+            required
+        >
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Angalau characters 6"
+            minlength="6"
+            required
+        >
+
+        <button
+            type="submit"
+            id="registerButton"
+        >
+            Jisajili
+        </button>
+
+    </form>
+
+    <div
+        class="message"
+        id="message"
+    ></div>
+
+    <div class="login">
+        Tayari una akaunti?
+        <a href="login.html">Ingia</a>
+    </div>
+
+</div>
+
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    updateProfile
+}
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyC_4QehikPfVElfPe4j9Jr-aG1xd-E54-U",
+
+    authDomain:
+        "win-market-10eaf.firebaseapp.com",
+
+    projectId:
+        "win-market-10eaf",
+
+    storageBucket:
+        "win-market-10eaf.firebasestorage.app",
+
+    messagingSenderId:
+        "82624065101",
+
+    appId:
+        "1:82624065101:web:6b0b822141010644057604"
+
+};
+
+
+const app =
+    initializeApp(firebaseConfig);
+
+const auth =
+    getAuth(app);
+
+
+const form =
+    document.getElementById("registerForm");
+
+const message =
+    document.getElementById("message");
+
+const button =
+    document.getElementById("registerButton");
+
+
+form.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+        const name =
+            document
+            .getElementById("name")
+            .value
+            .trim();
+
+        const email =
+            document
+            .getElementById("email")
+            .value
+            .trim();
+
+        const password =
+            document
+            .getElementById("password")
+            .value;
+
+
+        message.innerText =
+            "Inatengeneza akaunti...";
+
+        button.disabled = true;
+
+
+        try {
+
+            const userCredential =
+                await createUserWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+
+            await updateProfile(
+                userCredential.user,
+                {
+                    displayName: name
+                }
+            );
+
+
+            message.innerText =
+                "✅ Akaunti imeundwa!";
+
+
+            setTimeout(function() {
+
+                window.location.href =
+                    "login.html";
+
+            }, 1200);
+
+
+        } catch(error) {
+
+            console.error(error);
+
+
+            if (
+                error.code ===
+                "auth/email-already-in-use"
+            ) {
+
+                message.innerText =
+                    "Email hii tayari imetumika.";
+
+            }
+
+            else if (
+                error.code ===
+                "auth/weak-password"
+            ) {
+
+                message.innerText =
+                    "Password lazima iwe na angalau characters 6.";
+
+            }
+
+            else if (
+                error.code ===
+                "auth/invalid-email"
+            ) {
+
+                message.innerText =
+                    "Email uliyoingiza si sahihi.";
+
+            }
+
+            else {
+
+                message.innerText =
+                    "❌ " + error.message;
+
+            }
+
+            button.disabled = false;
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
