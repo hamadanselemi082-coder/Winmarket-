@@ -92,6 +92,16 @@
             cursor: not-allowed;
         }
 
+        .forgot {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
         .message {
             text-align: center;
             margin-top: 15px;
@@ -152,9 +162,20 @@
             Ingia
         </button>
 
+        <a
+            href="#"
+            id="forgotPassword"
+            class="forgot"
+        >
+            Umesahau password?
+        </a>
+
     </form>
 
-    <div class="message" id="message"></div>
+    <div
+        class="message"
+        id="message"
+    ></div>
 
     <div class="register">
         Huna akaunti?
@@ -171,30 +192,59 @@ from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
 import {
     getAuth,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    sendPasswordResetEmail
 }
 from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC_4QehikPfVElfPe4j9Jr-aG1xd-E54-U",
-    authDomain: "win-market-10eaf.firebaseapp.com",
-    projectId: "win-market-10eaf",
-    storageBucket: "win-market-10eaf.firebasestorage.app",
-    messagingSenderId: "82624065101",
-    appId: "1:82624065101:web:6b0b822141010644057604"
+
+    apiKey:
+        "AIzaSyC_4QehikPfVElfPe4j9Jr-aG1xd-E54-U",
+
+    authDomain:
+        "win-market-10eaf.firebaseapp.com",
+
+    projectId:
+        "win-market-10eaf",
+
+    storageBucket:
+        "win-market-10eaf.firebasestorage.app",
+
+    messagingSenderId:
+        "82624065101",
+
+    appId:
+        "1:82624065101:web:6b0b822141010644057604"
+
 };
 
 
-const app = initializeApp(firebaseConfig);
+const app =
+    initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+
+const auth =
+    getAuth(app);
 
 
-const form = document.getElementById("loginForm");
-const message = document.getElementById("message");
-const button = document.getElementById("loginButton");
+const form =
+    document.getElementById("loginForm");
 
+const message =
+    document.getElementById("message");
+
+const button =
+    document.getElementById("loginButton");
+
+const forgotPassword =
+    document.getElementById("forgotPassword");
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
 
 form.addEventListener(
     "submit",
@@ -214,51 +264,154 @@ form.addEventListener(
             .value;
 
 
-        message.innerText = "Inaingia...";
-        button.disabled = true;
+        message.innerText =
+            "Inaingia...";
+
+        button.disabled =
+            true;
 
 
         try {
 
-            const userCredential =
-                await signInWithEmailAndPassword(
-                    auth,
-                    email,
-                    password
-                );
+            await signInWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
 
 
             message.innerText =
                 "✅ Umeingia kikamilifu!";
 
 
-            setTimeout(function() {
+            setTimeout(
+                function() {
 
-                window.location.href =
-                    "index.html";
+                    window.location.href =
+                        "index.html";
 
-            }, 1000);
+                },
+                1000
+            );
 
 
-        } catch(error) {
+        }
+
+        catch(error) {
 
             console.error(error);
 
+
             if (
-                error.code === "auth/invalid-credential"
+                error.code ===
+                "auth/invalid-credential"
             ) {
 
                 message.innerText =
                     "❌ Email au password si sahihi.";
 
-            } else {
+            }
+
+            else {
 
                 message.innerText =
                     "❌ " + error.message;
 
             }
 
-            button.disabled = false;
+
+            button.disabled =
+                false;
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   FORGOT PASSWORD
+===================================================== */
+
+forgotPassword.addEventListener(
+    "click",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        const email =
+            document
+            .getElementById("email")
+            .value
+            .trim();
+
+
+        if (!email) {
+
+            message.innerText =
+                "⚠️ Andika email yako kwanza.";
+
+            document
+                .getElementById("email")
+                .focus();
+
+            return;
+
+        }
+
+
+        message.innerText =
+            "⏳ Inatuma reset link...";
+
+
+        try {
+
+            await sendPasswordResetEmail(
+                auth,
+                email
+            );
+
+
+            message.innerText =
+                "✅ Reset link imetumwa kwenye email yako. Angalia Inbox na Spam.";
+
+        }
+
+        catch(error) {
+
+            console.error(
+                "PASSWORD RESET ERROR:",
+                error
+            );
+
+
+            if (
+                error.code ===
+                "auth/invalid-email"
+            ) {
+
+                message.innerText =
+                    "❌ Email uliyoandika si sahihi.";
+
+            }
+
+            else if (
+                error.code ===
+                "auth/user-not-found"
+            ) {
+
+                message.innerText =
+                    "❌ Hakuna akaunti yenye email hiyo.";
+
+            }
+
+            else {
+
+                message.innerText =
+                    "❌ Imeshindikana kutuma reset link.";
+
+            }
 
         }
 
